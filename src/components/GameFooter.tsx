@@ -8,7 +8,7 @@ const GameFooter = () => (
         <div>
           <div className="flex items-center gap-2 mb-3">
             <OracleIcon className="w-6 h-6" />
-            <span className="font-display text-lg font-bold">LazyOracle</span>
+            <span className="font-display text-lg font-bold">LazyDecacorn</span>
           </div>
           <p className="text-sm text-muted-foreground">
             The forecasting game for startup nerds. Free to play.
@@ -39,11 +39,11 @@ const GameFooter = () => (
 
       {/* Permanent game disclaimer */}
       <div className="bg-muted rounded-2xl p-4 text-center text-xs text-muted-foreground leading-relaxed">
-        🎮 LazyOracle is a free-to-play forecasting GAME. Oracles (₽) are in-game points with no monetary value and cannot be exchanged for cash. Tournament prize pools are funded by subscription fees, similar to esports tournaments. This is a game of skill, not gambling. Not affiliated with any founders listed. Not financial advice. 18+.
+        🎮 LazyDecacorn is a free-to-play forecasting GAME. Oracles (₽) are in-game points with no monetary value and cannot be exchanged for cash. Tournament prize pools are funded by subscription fees, similar to esports tournaments. This is a game of skill, not gambling. Not affiliated with any founders listed. Not financial advice. 18+.
       </div>
 
       <p className="text-center text-xs text-muted-foreground mt-6">
-        © {new Date().getFullYear()} LazyOracle. All rights reserved.
+        © {new Date().getFullYear()} LazyDecacorn. All rights reserved.
       </p>
     </div>
   </footer>

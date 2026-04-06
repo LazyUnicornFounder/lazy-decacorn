@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2">
             <OracleIcon className="w-8 h-8" />
             <span className="font-display text-xl font-bold text-foreground">
-              Lazy<span className="text-gradient-primary">Oracle</span>
+              Lazy<span className="text-gradient-primary">Decacorn</span>
             </span>
           </Link>
 

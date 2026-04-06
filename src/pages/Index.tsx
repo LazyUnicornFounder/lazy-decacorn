@@ -35,7 +35,7 @@ const tiers = [
 ];
 
 const faqs = [
-  { q: "Is this real money?", a: "No! Oracles (₽) are in-game points with no cash value. LazyOracle is a free-to-play forecasting game." },
+  { q: "Is this real money?", a: "No! Oracles (₽) are in-game points with no cash value. LazyDecacorn is a free-to-play forecasting game." },
   { q: "How do cash prizes work?", a: "Monthly tournament prizes are funded by subscription fees, similar to esports tournaments. Top forecasters on the leaderboard split the prize pool." },
   { q: "How does scoring work?", a: "Each prediction has a crowd belief percentage. When you back a side and the prediction resolves in your favor, you earn Oracles based on how early and how much you committed." },
   { q: "Can I create my own predictions?", a: "Whale Oracle subscribers can propose new predictions! We review and publish the best ones." },
