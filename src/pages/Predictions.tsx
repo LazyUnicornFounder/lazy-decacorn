@@ -22,14 +22,6 @@ const PredictionsPage = () => {
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold mb-2">
-            Predictions 🔮
-          </h1>
-          <p className="text-muted-foreground mb-6">
-            Back your forecasts on which solo founders will make history.
-          </p>
-        </motion.div>
 
         {/* Search */}
         <div className="mb-4">
