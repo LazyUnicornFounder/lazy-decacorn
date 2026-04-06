@@ -39,7 +39,7 @@ const GameFooter = () => (
 
       {/* Permanent game disclaimer */}
       <div className="bg-muted rounded-2xl p-4 text-center text-xs text-muted-foreground leading-relaxed">
-        🎮 LazyDecacorn is a free-to-play forecasting GAME. Oracles (₽) are in-game points with no monetary value and cannot be exchanged for cash. Tournament prize pools are funded by subscription fees, similar to esports tournaments. This is a game of skill, not gambling. Not affiliated with any founders listed. Not financial advice. 18+.
+        🎮 LazyDecacorn is a free-to-play forecasting GAME. Decacorns (₽) are in-game points with no monetary value and cannot be exchanged for cash. Tournament prize pools are funded by subscription fees, similar to esports tournaments. This is a game of skill, not gambling. Not affiliated with any founders listed. Not financial advice. 18+.
       </div>
 
       <p className="text-center text-xs text-muted-foreground mt-6">

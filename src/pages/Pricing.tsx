@@ -10,7 +10,7 @@ const tiers = [
     icon: "🎮",
     color: "border-border",
     features: [
-      "1,000 starting Oracles",
+      "1,000 starting Decacorns",
       "Basic predictions",
       "Leaderboard access",
       "Community forecasts",
@@ -25,7 +25,7 @@ const tiers = [
     icon: "✨",
     color: "border-primary ring-2 ring-primary/20",
     features: [
-      "+5,000 Oracles monthly",
+      "+5,000 Decacorns monthly",
       "1.5x score multiplier",
       "Pro badge ✨",
       "Prize tournament eligibility",
@@ -35,13 +35,13 @@ const tiers = [
     highlight: true,
   },
   {
-    name: "Whale Oracle",
+    name: "Whale Decacorn",
     price: "₽29",
     priceDetail: "/month",
     icon: "🐋",
     color: "border-border",
     features: [
-      "+20,000 Oracles monthly",
+      "+20,000 Decacorns monthly",
       "Create your own predictions",
       "Premium charts & analytics",
       "Exclusive Whale badge 🐋",
