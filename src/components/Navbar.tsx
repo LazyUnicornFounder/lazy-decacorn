@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import OracleIcon from "./OracleIcon";
 
 const navLinks = [
-  { to: "/predict", label: "Predictions" },
+  { to: "/landing#how-to-play", label: "How It Works" },
   { to: "/leaderboard", label: "Leaderboard" },
   { to: "/pricing", label: "Power-Ups" },
 ];
