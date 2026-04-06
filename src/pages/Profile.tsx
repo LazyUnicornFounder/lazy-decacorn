@@ -64,7 +64,7 @@ const ProfilePage = () => {
                     <OracleIcon className="w-4 h-4" />
                     <span className="font-bold text-primary">₽{user.oracles.toLocaleString()}</span>
                   </div>
-                  <p className="text-xs text-muted-foreground">Oracles</p>
+                  <p className="text-xs text-muted-foreground">Decacorns</p>
                 </div>
                 <div className="bg-muted rounded-2xl p-3 text-center">
                   <p className="font-bold">{user.win_rate}%</p>
@@ -94,7 +94,7 @@ const ProfilePage = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="font-semibold">Free Player</p>
-              <p className="text-sm text-muted-foreground">Upgrade to get more Oracles and unlock tournaments</p>
+              <p className="text-sm text-muted-foreground">Upgrade to get more Decacorns and unlock tournaments</p>
             </div>
             <a href="/pricing" className="btn-game btn-primary-game text-sm px-5 py-2">
               Upgrade

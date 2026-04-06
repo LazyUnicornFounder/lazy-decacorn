@@ -12,7 +12,7 @@ const tiers = [
     name: "Free Player",
     price: "Free",
     icon: "🎮",
-    features: ["1,000 starting Oracles", "Basic predictions", "Leaderboard access"],
+    features: ["1,000 starting Decacorns", "Basic predictions", "Leaderboard access"],
     cta: "Play Free",
     highlight: false,
   },
@@ -20,24 +20,24 @@ const tiers = [
     name: "Pro Forecaster",
     price: "₽9/mo",
     icon: "✨",
-    features: ["+5,000 Oracles monthly", "1.5x score multiplier", "Pro badge ✨", "Prize tournaments", "Early access predictions"],
+    features: ["+5,000 Decacorns monthly", "1.5x score multiplier", "Pro badge ✨", "Prize tournaments", "Early access predictions"],
     cta: "Get This Power-Up",
     highlight: true,
   },
   {
-    name: "Whale Oracle",
+    name: "Whale Decacorn",
     price: "₽29/mo",
     icon: "🐋",
-    features: ["+20,000 Oracles monthly", "Create predictions", "Premium charts", "Whale badge 🐋", "Double prize eligibility", "Discord access"],
+    features: ["+20,000 Decacorns monthly", "Create predictions", "Premium charts", "Whale badge 🐋", "Double prize eligibility", "Discord access"],
     cta: "Get This Power-Up",
     highlight: false,
   },
 ];
 
 const faqs = [
-  { q: "Is this real money?", a: "No! Oracles (₽) are in-game points with no cash value. LazyDecacorn is a free-to-play forecasting game." },
+  { q: "Is this real money?", a: "No! Decacorns (₽) are in-game points with no cash value. LazyDecacorn is a free-to-play forecasting game." },
   { q: "How do cash prizes work?", a: "Monthly tournament prizes are funded by subscription fees, similar to esports tournaments. Top forecasters on the leaderboard split the prize pool." },
-  { q: "How does scoring work?", a: "Each prediction has a crowd belief percentage. When you back a side and the prediction resolves in your favor, you earn Oracles based on how early and how much you committed." },
+  { q: "How does scoring work?", a: "Each prediction has a crowd belief percentage. When you back a side and the prediction resolves in your favor, you earn Decacorns based on how early and how much you committed." },
   { q: "Can I create my own predictions?", a: "Whale Oracle subscribers can propose new predictions! We review and publish the best ones." },
 ];
 
@@ -114,7 +114,7 @@ const LandingPage = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { step: "1", icon: "🎁", title: "Sign Up", desc: "Get 1,000 free Oracles ₽ to start predicting" },
+              { step: "1", icon: "🎁", title: "Sign Up", desc: "Get 1,000 free Decacorns ₽ to start predicting" },
               { step: "2", icon: "🔮", title: "Make Predictions", desc: "Back YES or NO on founder predictions" },
               { step: "3", icon: "🏆", title: "Win Trophies", desc: "Climb the leaderboard, win monthly cash prizes" },
             ].map((item, i) => (

@@ -188,7 +188,7 @@ const PredictionDetail = () => {
           {/* Amount slider */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-              <label className="text-sm font-semibold">Oracles to commit</label>
+              <label className="text-sm font-semibold">Decacorns to commit</label>
               <div className="flex items-center gap-1 text-primary font-bold">
                 <OracleIcon className="w-4 h-4" /> ₽{amount.toLocaleString()}
               </div>
