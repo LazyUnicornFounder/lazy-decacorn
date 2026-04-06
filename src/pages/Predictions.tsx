@@ -25,7 +25,7 @@ const PredictionsPage = () => {
 
         {/* Headline */}
         <h1 className="font-display text-2xl sm:text-3xl font-bold mb-6 max-w-2xl">
-          The prediction game for solo founders on their way to building{" "}
+          The prediction game for <span className="text-primary">solo founders</span> on their way to building{" "}
           <span className="text-gradient-primary">$10 billion decacorns</span>, and beyond.
         </h1>
 
