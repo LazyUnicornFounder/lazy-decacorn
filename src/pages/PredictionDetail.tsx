@@ -5,7 +5,7 @@ import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "rec
 import Navbar from "@/components/Navbar";
 import GameFooter from "@/components/GameFooter";
 import OracleIcon from "@/components/OracleIcon";
-import { predictions, crowdBelief, daysUntil, recentForecasts } from "@/lib/mockData";
+import { predictions, crowdBelief, recentForecasts } from "@/lib/mockData";
 
 // Mock chart data
 const chartData = Array.from({ length: 30 }, (_, i) => ({
@@ -35,7 +35,6 @@ const PredictionDetail = () => {
   }
 
   const belief = crowdBelief(prediction);
-  const days = daysUntil(prediction.resolution_date);
 
   // Simple potential reward calc
   const pool = side === "yes" ? prediction.yes_pool : prediction.no_pool;
@@ -110,7 +109,7 @@ const PredictionDetail = () => {
             />
           </div>
           <p className="text-xs text-muted-foreground mt-2 text-center">
-            👥 {Math.round(prediction.volume / 50).toLocaleString()} forecasters predicted this • ⏰ {days} days left
+            👥 {Math.round(prediction.volume / 50).toLocaleString()} forecasters predicted this
           </p>
         </motion.div>
 
@@ -255,9 +254,6 @@ const PredictionDetail = () => {
           <h3 className="font-display text-lg font-bold mb-3">Resolution Criteria ✅</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
             {prediction.resolution_criteria}
-          </p>
-          <p className="text-xs text-muted-foreground mt-3">
-            Resolves: {new Date(prediction.resolution_date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
           </p>
         </motion.div>
       </div>

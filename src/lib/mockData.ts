@@ -4,6 +4,8 @@ import marcImg from '@/assets/founders/marc-lou.png';
 import danielImg from '@/assets/founders/daniel-vassallo.jpg';
 import justinImg from '@/assets/founders/justin-welsh.jpg';
 import damonImg from '@/assets/founders/damon-chen.jpg';
+import benImg from '@/assets/founders/ben-tossell.jpg';
+import seanImg from '@/assets/founders/sean-dorje.jpg';
 import theBigOneImg from '@/assets/the-big-one.png';
 import theLongGameImg from '@/assets/the-long-game.png';
 import unicornRaceImg from '@/assets/unicorn-race.png';
@@ -228,6 +230,40 @@ export const predictions: Prediction[] = [
     status: 'open',
     category: '$10B Race',
     created_at: '2024-02-01',
+  },
+  {
+    id: '11',
+    slug: 'ben-tossell-10m',
+    question: 'Will Ben Tossell\'s ventures exceed $10M ARR by Dec 31, 2028?',
+    founder_name: 'Ben Tossell',
+    founder_photo_url: benImg,
+    company_name: 'Ben\'s Bites / Makerpad',
+    description: 'Ben Tossell built Makerpad (acquired by Zapier) and runs Ben\'s Bites, the biggest AI newsletter.',
+    yes_pool: 900,
+    no_pool: 1100,
+    volume: 41000,
+    resolution_date: '2028-12-31',
+    resolution_criteria: 'Ben Tossell\'s combined revenue from all ventures exceeds $10M ARR.',
+    status: 'open',
+    category: '$10B Race',
+    created_at: '2024-03-01',
+  },
+  {
+    id: '12',
+    slug: 'sean-dorje-naive-1b',
+    question: 'Will Naive (usenaive.ai) reach $1B valuation by Dec 31, 2029?',
+    founder_name: 'Sean Dorje',
+    founder_photo_url: seanImg,
+    company_name: 'Naive (YC S25)',
+    description: 'Sean Dorje is building Naive, an autonomous company runtime that deploys AI employees. Backed by Y Combinator.',
+    yes_pool: 700,
+    no_pool: 1300,
+    volume: 35000,
+    resolution_date: '2029-12-31',
+    resolution_criteria: 'Naive reaches $1B valuation through verified funding or public markets.',
+    status: 'open',
+    category: '$10B Race',
+    created_at: '2024-03-15',
   },
 ];
 
