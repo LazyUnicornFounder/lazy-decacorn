@@ -262,7 +262,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2029-12-31',
     resolution_criteria: 'Naive reaches $1B valuation through verified funding or public markets.',
     status: 'open',
-    category: 'Unicorn Race',
+    category: 'Y Combinator Race',
     created_at: '2024-03-15',
   },
 ];
@@ -288,7 +288,7 @@ export const recentForecasts: Forecast[] = [
   { id: '5', user_name: 'FutureSeer', user_avatar: '', side: 'no', oracles: 750, created_at: '2024-03-14T18:30:00Z' },
 ];
 
-export const categories = ['All', 'MRR Race', 'Unicorn Race', 'Decacorn Race', 'Resolved'];
+export const categories = ['All', 'MRR Race', 'Unicorn Race', 'Decacorn Race', 'Y Combinator Race', 'Resolved'];
 
 export const achievements = [
   { id: 'first-prediction', name: 'First Prediction', description: 'Make your first forecast', icon: '🔮', unlocked: true },
