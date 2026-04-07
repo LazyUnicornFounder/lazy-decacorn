@@ -26,7 +26,7 @@ const PredictionDetail = () => {
         <div className="text-center py-20">
           <p className="text-4xl mb-3">🔮</p>
           <p className="font-display text-xl">Prediction not found</p>
-          <Link to="/predict" className="text-primary font-semibold mt-4 inline-block">
+          <Link to="/" className="text-primary font-semibold mt-4 inline-block">
             ← Back to Predictions
           </Link>
         </div>
@@ -47,7 +47,7 @@ const PredictionDetail = () => {
       <Navbar />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link to="/predict" className="text-primary text-sm font-semibold mb-6 inline-block hover:underline">
+        <Link to="/" className="text-primary text-sm font-semibold mb-6 inline-block hover:underline">
           ← Back to Predictions
         </Link>
 

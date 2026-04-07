@@ -17,7 +17,7 @@ const GameFooter = () => (
         <div>
           <h4 className="font-display font-semibold mb-3">Play</h4>
           <div className="space-y-2 text-sm text-muted-foreground">
-            <Link to="/predict" className="block hover:text-foreground transition-colors">Predictions</Link>
+            <Link to="/" className="block hover:text-foreground transition-colors">Predictions</Link>
             <Link to="/leaderboard" className="block hover:text-foreground transition-colors">Leaderboard</Link>
             <Link to="/pricing" className="block hover:text-foreground transition-colors">Power-Ups</Link>
           </div>
