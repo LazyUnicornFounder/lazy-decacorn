@@ -14,6 +14,95 @@ export type Database = {
   }
   public: {
     Tables: {
+      forecasts: {
+        Row: {
+          created_at: string
+          id: string
+          oracles_amount: number
+          prediction_id: string
+          side: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          oracles_amount: number
+          prediction_id: string
+          side: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          oracles_amount?: number
+          prediction_id?: string
+          side?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "forecasts_prediction_id_fkey"
+            columns: ["prediction_id"]
+            isOneToOne: false
+            referencedRelation: "predictions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      predictions: {
+        Row: {
+          category: string
+          company_name: string
+          created_at: string
+          description: string
+          founder_name: string
+          founder_photo_url: string | null
+          id: string
+          no_pool: number
+          question: string
+          resolution_criteria: string
+          resolution_date: string
+          slug: string
+          status: string
+          volume: number
+          yes_pool: number
+        }
+        Insert: {
+          category: string
+          company_name: string
+          created_at?: string
+          description: string
+          founder_name: string
+          founder_photo_url?: string | null
+          id?: string
+          no_pool?: number
+          question: string
+          resolution_criteria: string
+          resolution_date: string
+          slug: string
+          status?: string
+          volume?: number
+          yes_pool?: number
+        }
+        Update: {
+          category?: string
+          company_name?: string
+          created_at?: string
+          description?: string
+          founder_name?: string
+          founder_photo_url?: string | null
+          id?: string
+          no_pool?: number
+          question?: string
+          resolution_criteria?: string
+          resolution_date?: string
+          slug?: string
+          status?: string
+          volume?: number
+          yes_pool?: number
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -67,7 +156,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      place_forecast: {
+        Args: { p_amount: number; p_prediction_id: string; p_side: string }
+        Returns: Json
+      }
     }
     Enums: {
       [_ in never]: never

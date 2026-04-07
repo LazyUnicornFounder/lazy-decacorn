@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import GameFooter from "@/components/GameFooter";
 import PredictionCard from "@/components/PredictionCard";
 import Leaderbox from "@/components/Leaderbox";
-import { predictions, categories } from "@/lib/mockData";
+import { usePredictions } from "@/hooks/usePredictions";
+import { categories } from "@/lib/mockData";
 
 const PredictionsPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [search, setSearch] = useState("");
+  const { data: predictions = [], isLoading } = usePredictions();
 
   const filtered = predictions.filter((p) => {
     const matchCat = activeCategory === "All" || p.category === activeCategory ||
@@ -122,13 +123,20 @@ const PredictionsPage = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((p, i) => (
-            <PredictionCard key={p.id} category={p.category} index={i} />
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="text-center py-20 text-muted-foreground">
+            <p className="text-4xl mb-3">🔮</p>
+            <p className="font-display text-lg">Loading predictions...</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filtered.map((p, i) => (
+              <PredictionCard key={p.id} prediction={p} index={i} />
+            ))}
+          </div>
+        )}
 
-        {filtered.length === 0 && (
+        {!isLoading && filtered.length === 0 && (
           <div className="text-center py-20 text-muted-foreground">
             <p className="text-4xl mb-3">🔍</p>
             <p className="font-display text-lg">No predictions found</p>

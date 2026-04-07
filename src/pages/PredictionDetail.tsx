@@ -5,9 +5,10 @@ import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "rec
 import Navbar from "@/components/Navbar";
 import GameFooter from "@/components/GameFooter";
 import OracleIcon from "@/components/OracleIcon";
-import { predictions, crowdBelief, recentForecasts } from "@/lib/mockData";
+import { usePrediction, useForecasts, crowdBelief } from "@/hooks/usePredictions";
+import { usePlaceForecast } from "@/hooks/usePlaceForecast";
+import { useAuth } from "@/contexts/AuthContext";
 
-// Mock chart data
 const chartData = Array.from({ length: 30 }, (_, i) => ({
   day: `Day ${i + 1}`,
   belief: Math.max(20, Math.min(80, 50 + Math.round((Math.random() - 0.5) * 30))),
@@ -15,9 +16,24 @@ const chartData = Array.from({ length: 30 }, (_, i) => ({
 
 const PredictionDetail = () => {
   const { slug } = useParams();
-  const prediction = predictions.find((p) => p.slug === slug);
+  const { data: prediction, isLoading } = usePrediction(slug);
+  const { data: forecasts = [] } = useForecasts(prediction?.id);
+  const { user, profile, signInWithGoogle } = useAuth();
+  const placeForecast = usePlaceForecast();
   const [side, setSide] = useState<"yes" | "no">("yes");
   const [amount, setAmount] = useState(100);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <div className="text-center py-20">
+          <p className="text-4xl mb-3">🔮</p>
+          <p className="font-display text-xl">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!prediction) {
     return (
@@ -35,12 +51,22 @@ const PredictionDetail = () => {
   }
 
   const belief = crowdBelief(prediction);
-
-  // Simple potential reward calc
   const pool = side === "yes" ? prediction.yes_pool : prediction.no_pool;
   const otherPool = side === "yes" ? prediction.no_pool : prediction.yes_pool;
   const shares = (amount * otherPool) / (pool + amount);
   const potentialReward = Math.round(shares + amount * 0.98);
+
+  const handlePlaceForecast = () => {
+    if (!user) {
+      signInWithGoogle();
+      return;
+    }
+    placeForecast.mutate({
+      predictionId: prediction.id,
+      side,
+      amount,
+    });
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -93,9 +119,7 @@ const PredictionDetail = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
         >
-          <p className="text-sm font-semibold text-muted-foreground mb-3">
-            Crowd Belief
-          </p>
+          <p className="text-sm font-semibold text-muted-foreground mb-3">Crowd Belief</p>
           <div className="flex items-center justify-between mb-2">
             <span className="text-2xl font-bold text-yes">{belief}% YES</span>
             <span className="text-2xl font-bold text-no">{100 - belief}% NO</span>
@@ -109,7 +133,7 @@ const PredictionDetail = () => {
             />
           </div>
           <p className="text-xs text-muted-foreground mt-2 text-center">
-            👥 {Math.round(prediction.volume / 50).toLocaleString()} forecasters predicted this
+            👥 {forecasts.length} forecasters predicted this
           </p>
         </motion.div>
 
@@ -165,9 +189,7 @@ const PredictionDetail = () => {
             <button
               onClick={() => setSide("yes")}
               className={`flex-1 btn-game py-3 text-sm font-bold transition-all ${
-                side === "yes"
-                  ? "btn-yes scale-105"
-                  : "bg-muted text-muted-foreground"
+                side === "yes" ? "btn-yes scale-105" : "bg-muted text-muted-foreground"
               }`}
             >
               Back YES ✅
@@ -175,9 +197,7 @@ const PredictionDetail = () => {
             <button
               onClick={() => setSide("no")}
               className={`flex-1 btn-game py-3 text-sm font-bold transition-all ${
-                side === "no"
-                  ? "btn-no scale-105"
-                  : "bg-muted text-muted-foreground"
+                side === "no" ? "btn-no scale-105" : "bg-muted text-muted-foreground"
               }`}
             >
               Back NO ❌
@@ -195,7 +215,7 @@ const PredictionDetail = () => {
             <input
               type="range"
               min={10}
-              max={5000}
+              max={profile ? Math.min(5000, profile.oracles_balance) : 5000}
               step={10}
               value={amount}
               onChange={(e) => setAmount(Number(e.target.value))}
@@ -203,7 +223,7 @@ const PredictionDetail = () => {
             />
             <div className="flex justify-between text-xs text-muted-foreground">
               <span>₽10</span>
-              <span>₽5,000</span>
+              <span>₽{profile ? Math.min(5000, profile.oracles_balance).toLocaleString() : "5,000"}</span>
             </div>
           </div>
 
@@ -215,9 +235,22 @@ const PredictionDetail = () => {
             </p>
           </div>
 
-          <button className="w-full btn-game btn-primary-game text-lg py-4">
-            🔮 Lock In Prediction
-          </button>
+          {user ? (
+            <button
+              onClick={handlePlaceForecast}
+              disabled={placeForecast.isPending}
+              className="w-full btn-game btn-primary-game text-lg py-4 disabled:opacity-50"
+            >
+              {placeForecast.isPending ? "Locking in..." : "🔮 Lock In Prediction"}
+            </button>
+          ) : (
+            <button
+              onClick={signInWithGoogle}
+              className="w-full btn-game btn-primary-game text-lg py-4"
+            >
+              🔑 Sign In to Predict
+            </button>
+          )}
         </motion.div>
 
         {/* Recent forecasts */}
@@ -228,20 +261,26 @@ const PredictionDetail = () => {
           transition={{ delay: 0.3 }}
         >
           <h3 className="font-display text-lg font-bold mb-4">Recent Forecasts</h3>
-          <div className="space-y-3">
-            {recentForecasts.map((f) => (
-              <div key={f.id} className="flex items-center gap-3 text-sm">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-xs">
-                  {f.user_name.charAt(0)}
+          {forecasts.length === 0 ? (
+            <p className="text-sm text-muted-foreground text-center py-4">
+              No forecasts yet — be the first! 🔮
+            </p>
+          ) : (
+            <div className="space-y-3">
+              {forecasts.map((f: any) => (
+                <div key={f.id} className="flex items-center gap-3 text-sm">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-xs">
+                    {f.profiles?.display_name?.charAt(0) || "?"}
+                  </div>
+                  <span className="font-semibold">{f.profiles?.display_name || "Anonymous"}</span>
+                  <span className={`font-bold ${f.side === "yes" ? "text-yes" : "text-no"}`}>
+                    backed {f.side.toUpperCase()}
+                  </span>
+                  <span className="text-muted-foreground">with ₽{Number(f.oracles_amount).toLocaleString()}</span>
                 </div>
-                <span className="font-semibold">{f.user_name}</span>
-                <span className={`font-bold ${f.side === "yes" ? "text-yes" : "text-no"}`}>
-                  backed {f.side.toUpperCase()}
-                </span>
-                <span className="text-muted-foreground">with ₽{f.oracles.toLocaleString()}</span>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </motion.div>
 
         {/* Resolution criteria */}
