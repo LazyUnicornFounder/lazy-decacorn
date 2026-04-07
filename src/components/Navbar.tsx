@@ -41,10 +41,13 @@ const Navbar = () => {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
-            {/* Game badge */}
-            <div className="game-badge hidden sm:flex items-center gap-1">
-              🎮 PLAY MONEY GAME
-            </div>
+            {/* Power-Ups button */}
+            <Link
+              to="/pricing"
+              className="hidden sm:flex items-center gap-1.5 bg-accent text-accent-foreground font-bold text-sm px-4 py-2 rounded-full hover:brightness-110 transition-all"
+            >
+              ⚡ Get Power-Ups
+            </Link>
 
             {user && profile ? (
               <>
