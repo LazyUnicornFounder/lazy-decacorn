@@ -75,7 +75,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2027-12-31',
     resolution_criteria: 'Combined ARR from all of Pieter\'s products must exceed $100M as verified by public revenue data.',
     status: 'open',
-    category: '$10B Race',
+    category: 'Decacorn Race',
     created_at: '2024-01-15',
   },
   {
@@ -92,7 +92,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2027-12-31',
     resolution_criteria: 'Combined ARR from Tony\'s products must reach $10M.',
     status: 'open',
-    category: 'Yearly Goals',
+    category: 'MRR Race',
     created_at: '2024-02-01',
   },
   {
@@ -109,7 +109,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2026-12-31',
     resolution_criteria: 'Marc Lou\'s total ARR across all products exceeds $5M.',
     status: 'open',
-    category: 'Quick Calls',
+    category: 'MRR Race',
     created_at: '2024-01-20',
   },
   {
@@ -126,7 +126,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2027-12-31',
     resolution_criteria: 'Daniel\'s combined revenue from all products and courses exceeds $5M ARR.',
     status: 'open',
-    category: 'Yearly Goals',
+    category: 'MRR Race',
     created_at: '2024-03-01',
   },
   {
@@ -143,7 +143,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2027-12-31',
     resolution_criteria: 'Justin\'s annual revenue from all sources exceeds $10M.',
     status: 'open',
-    category: '$10B Race',
+    category: 'Decacorn Race',
     created_at: '2024-02-15',
   },
   {
@@ -160,7 +160,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2027-12-31',
     resolution_criteria: 'Testimonial.to\'s ARR reaches $10M.',
     status: 'open',
-    category: 'Yearly Goals',
+    category: 'MRR Race',
     created_at: '2024-03-15',
   },
   {
@@ -177,7 +177,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2030-12-31',
     resolution_criteria: 'Any company with a single founder reaches $10B valuation through verified funding or public markets.',
     status: 'open',
-    category: '$10B Race',
+    category: 'Decacorn Race',
     created_at: '2024-01-01',
   },
   {
@@ -194,7 +194,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2032-12-31',
     resolution_criteria: 'Any solo-founded company reaches $10B valuation.',
     status: 'open',
-    category: '$10B Race',
+    category: 'Decacorn Race',
     created_at: '2024-01-01',
   },
   {
@@ -211,7 +211,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2028-12-31',
     resolution_criteria: 'Any solo-founded company reaches $1B valuation.',
     status: 'open',
-    category: '$10B Race',
+    category: 'Decacorn Race',
     created_at: '2024-01-01',
   },
   {
@@ -228,7 +228,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2028-12-31',
     resolution_criteria: 'A solo founder building primarily AI products reaches $1B valuation.',
     status: 'open',
-    category: '$10B Race',
+    category: 'Decacorn Race',
     created_at: '2024-02-01',
   },
   {
@@ -245,7 +245,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2028-12-31',
     resolution_criteria: 'Ben Tossell\'s combined revenue from all ventures exceeds $10M ARR.',
     status: 'open',
-    category: '$10B Race',
+    category: 'Decacorn Race',
     created_at: '2024-03-01',
   },
   {
@@ -262,7 +262,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2029-12-31',
     resolution_criteria: 'Naive reaches $1B valuation through verified funding or public markets.',
     status: 'open',
-    category: '$10B Race',
+    category: 'Decacorn Race',
     created_at: '2024-03-15',
   },
 ];
