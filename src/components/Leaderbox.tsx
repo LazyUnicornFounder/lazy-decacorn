@@ -19,7 +19,7 @@ const Leaderbox = () => {
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2">
           <span className="text-2xl">🏆</span>
-          <h2 className="font-display text-lg font-bold">Top Oracles</h2>
+          <h2 className="font-display text-lg font-bold">Leaderboard</h2>
         </div>
         <Link
           to="/leaderboard"
