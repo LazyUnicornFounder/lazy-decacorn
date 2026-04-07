@@ -211,7 +211,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2028-12-31',
     resolution_criteria: 'Any solo-founded company reaches $1B valuation.',
     status: 'open',
-    category: 'Decacorn Race',
+    category: 'Unicorn Race',
     created_at: '2024-01-01',
   },
   {
@@ -228,7 +228,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2028-12-31',
     resolution_criteria: 'A solo founder building primarily AI products reaches $1B valuation.',
     status: 'open',
-    category: 'Decacorn Race',
+    category: 'Unicorn Race',
     created_at: '2024-02-01',
   },
   {
@@ -245,7 +245,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2028-12-31',
     resolution_criteria: 'Ben Tossell\'s combined revenue from all ventures exceeds $10M ARR.',
     status: 'open',
-    category: 'Decacorn Race',
+    category: 'MRR Race',
     created_at: '2024-03-01',
   },
   {
@@ -262,7 +262,7 @@ export const predictions: Prediction[] = [
     resolution_date: '2029-12-31',
     resolution_criteria: 'Naive reaches $1B valuation through verified funding or public markets.',
     status: 'open',
-    category: 'Decacorn Race',
+    category: 'Unicorn Race',
     created_at: '2024-03-15',
   },
 ];
