@@ -4,7 +4,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/contexts/AuthContext";
-import Index from "./pages/Index.tsx";
 import Predictions from "./pages/Predictions.tsx";
 import PredictionDetail from "./pages/PredictionDetail.tsx";
 import Leaderboard from "./pages/Leaderboard.tsx";
@@ -23,7 +22,6 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Predictions />} />
-            <Route path="/landing" element={<Index />} />
             <Route path="/predict/:slug" element={<PredictionDetail />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/profile" element={<Profile />} />
