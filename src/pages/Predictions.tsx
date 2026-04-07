@@ -81,7 +81,6 @@ const PredictionsPage = () => {
                     </div>
                   </div>
                 </div>
-                </div>
               </div>
 
               <div>
