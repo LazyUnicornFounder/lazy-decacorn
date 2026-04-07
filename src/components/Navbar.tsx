@@ -22,22 +22,6 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Nav Links */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-                  location.pathname === link.to
-                    ? "bg-primary/10 text-primary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
 
           {/* Right side */}
           <div className="flex items-center gap-3">
