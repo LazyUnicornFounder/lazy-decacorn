@@ -40,7 +40,7 @@ const PredictionsPage = () => {
             </div>
             <div className="flex flex-col gap-4 text-sm text-muted-foreground flex-1">
               <p>
-                Anyone can join the race — just sign up, add your X account, and let people see what you're building so they can place predictions on your journey.
+                Lazy Decacorn is made for solo founders — just sign up, add your X account, and let people see what you're building so they can place predictions on your journey.
               </p>
               <div className="flex flex-col gap-3">
                 <div className="flex items-start gap-3">
