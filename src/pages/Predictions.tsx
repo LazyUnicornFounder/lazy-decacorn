@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import GameFooter from "@/components/GameFooter";
 import PredictionCard from "@/components/PredictionCard";
+import Leaderbox from "@/components/Leaderbox";
 import { predictions, categories } from "@/lib/mockData";
 
 const PredictionsPage = () => {
@@ -28,6 +29,11 @@ const PredictionsPage = () => {
           The prediction game for <span className="text-primary">solo founders</span> on their way to building{" "}
           <span className="text-gradient-primary">$10 billion decacorns</span>, and beyond.
         </h1>
+
+        {/* Leaderbox */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-8">
+          <Leaderbox />
+        </div>
 
         {/* Search */}
         <div className="mb-4">
