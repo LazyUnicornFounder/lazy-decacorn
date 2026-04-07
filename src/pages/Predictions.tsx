@@ -49,15 +49,15 @@ const PredictionsPage = () => {
                   <div className="flex items-start gap-3">
                     <span className="bg-primary/10 text-primary rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0">1</span>
                     <div>
-                      <p className="font-semibold text-foreground">Enter the Race</p>
-                      <p>Sign up, link your X account, and pick a milestone to chase.</p>
+                      <p className="font-semibold text-foreground">Pick a Race</p>
+                      <p>Choose your milestone — MRR, Unicorn, Decacorn, or YC Race.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="bg-primary/10 text-primary rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0">2</span>
                     <div>
-                      <p className="font-semibold text-foreground">Build in Public</p>
-                      <p>Share your progress and let the community follow your journey.</p>
+                      <p className="font-semibold text-foreground">Enter & Build in Public</p>
+                      <p>Link your X account and let the community follow your journey to the top.</p>
                     </div>
                   </div>
                 </div>
