@@ -3,7 +3,7 @@ import OracleIcon from "./OracleIcon";
 import { useAuth } from "@/contexts/AuthContext";
 
 const navLinks = [
-  { to: "/landing#how-to-play", label: "How It Works" },
+  { to: "/#how-to-play", label: "How It Works" },
   { to: "/leaderboard", label: "Leaderboard" },
   { to: "/pricing", label: "Power-Ups" },
 ];
