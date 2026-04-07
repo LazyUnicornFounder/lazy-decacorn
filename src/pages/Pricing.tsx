@@ -20,7 +20,7 @@ const tiers = [
   },
   {
     name: "Pro Forecaster",
-    price: "₽9",
+    price: "$9",
     priceDetail: "/month",
     icon: "✨",
     color: "border-primary ring-2 ring-primary/20",
@@ -36,7 +36,7 @@ const tiers = [
   },
   {
     name: "Whale Decacorn",
-    price: "₽29",
+    price: "$29",
     priceDetail: "/month",
     icon: "🐋",
     color: "border-border",
