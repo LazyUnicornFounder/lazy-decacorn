@@ -288,7 +288,7 @@ export const recentForecasts: Forecast[] = [
   { id: '5', user_name: 'FutureSeer', user_avatar: '', side: 'no', oracles: 750, created_at: '2024-03-14T18:30:00Z' },
 ];
 
-export const categories = ['All', 'MRR Race', 'Unicorn Race', 'Decacorn Race', 'Y Combinator Race', 'Resolved'];
+export const categories = ['All', 'MRR Race', 'Unicorn Race', 'Decacorn Race', 'Y Combinator Race', 'Results'];
 
 export const achievements = [
   { id: 'first-prediction', name: 'First Prediction', description: 'Make your first forecast', icon: '🔮', unlocked: true },
