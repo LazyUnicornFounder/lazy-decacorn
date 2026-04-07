@@ -30,9 +30,43 @@ const PredictionsPage = () => {
           <span className="text-gradient-primary">$10 billion decacorns</span>, and beyond.
         </h1>
 
-        {/* Leaderbox */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-8">
+        {/* Leaderbox + How It Works */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Leaderbox />
+          <div className="card-game col-span-1 row-span-2 p-6 flex flex-col" id="how-to-play">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-2xl">🎯</span>
+              <h2 className="font-display text-lg font-bold">How It Works</h2>
+            </div>
+            <div className="flex flex-col gap-4 text-sm text-muted-foreground flex-1">
+              <p>
+                Anyone can join the race — just sign up, add your X account, and let people see what you're building so they can place predictions on your journey.
+              </p>
+              <div className="flex flex-col gap-3">
+                <div className="flex items-start gap-3">
+                  <span className="bg-primary/10 text-primary rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0">1</span>
+                  <div>
+                    <p className="font-semibold text-foreground">Sign Up & Connect</p>
+                    <p>Create your account and link your X profile so the community can follow your progress.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="bg-primary/10 text-primary rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0">2</span>
+                  <div>
+                    <p className="font-semibold text-foreground">Place Predictions</p>
+                    <p>Use your play-money Oracles to bet on whether founders will hit their milestones.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="bg-primary/10 text-primary rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0">3</span>
+                  <div>
+                    <p className="font-semibold text-foreground">Climb the Leaderboard</p>
+                    <p>Earn XP, level up, and prove you can spot the next decacorn before anyone else.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Search */}
