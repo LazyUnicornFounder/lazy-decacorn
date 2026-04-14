@@ -10,6 +10,7 @@ import Leaderboard from "./pages/Leaderboard.tsx";
 import Profile from "./pages/Profile.tsx";
 import Pricing from "./pages/Pricing.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import OpenSourceBanner from "@/components/OpenSourceBanner";
 
 const queryClient = new QueryClient();
 
