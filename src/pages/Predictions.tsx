@@ -6,6 +6,7 @@ import PredictionCard from "@/components/PredictionCard";
 import Leaderbox from "@/components/Leaderbox";
 import { usePredictions } from "@/hooks/usePredictions";
 import { categories } from "@/lib/mockData";
+import PortfolioFooter from "@/components/PortfolioFooter";
 
 const PredictionsPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -147,6 +148,7 @@ const PredictionsPage = () => {
 
       <OpenSourceBanner />
       <GameFooter />
+          <PortfolioFooter />
     </div>
   );
 };
